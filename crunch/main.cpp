@@ -331,8 +331,8 @@ int main(int argc, const char* argv[])
     RemoveFile(outputDir + name + ".bin");
     RemoveFile(outputDir + name + ".xml");
     RemoveFile(outputDir + name + ".json");
-    for (size_t i = 0; i < 16; ++i)
-        RemoveFile(outputDir + name + to_string(i) + ".png");
+//    for (size_t i = 0; i < 16; ++i)
+//        RemoveFile(outputDir + name + to_string(i) + ".png");
     
     //Load the bitmaps from all the input files and directories
     if (optVerbose)
@@ -372,8 +372,8 @@ int main(int argc, const char* argv[])
     for (size_t i = 0; i < packers.size(); ++i)
     {
         if (optVerbose)
-            cout << "writing png: " << outputDir << name << to_string(i) << ".png" << endl;
-        packers[i]->SavePng(outputDir + name + to_string(i) + ".png");
+            cout << "writing png: " << outputDir << name << ".png" << endl;
+        packers[i]->SavePng(outputDir + name + ".png");
     }
     
     //Save the atlas binary
